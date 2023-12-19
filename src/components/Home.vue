@@ -767,9 +767,9 @@ export default {
                 this.subCategoriesLoaded++
             if (this.eventsLoaded == 5 && this.reviewsLoaded == 2 && this.subCategoriesLoaded == 6) {
                 this.resetWebFlow();
-                await this.loadScript('https://eventually.com/js/counter.js');
-                await this.loadScript("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js");
-                await this.loadScript("https://cdn.jsdelivr.net/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js");
+                await this.$loadScript('https://v6.eventually.com/scripts/counter.js');
+                await this.$loadScript("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js");
+                await this.$loadScript("https://cdn.jsdelivr.net/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js");
                 this.setSlider();
             }
         },
