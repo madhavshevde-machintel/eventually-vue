@@ -758,6 +758,9 @@ export default {
                 return;
             window.open("https://eventually.com/search-result?q=" + this.searchText);
         },
+        /* Reset webflow and other scripts only after all data is loaded.
+           because otherwise animations don't work properly
+        */ 
         async processJavaScripts(eventType) {
             if (eventType == 'events-loaded')
                 this.eventsLoaded++;
